@@ -1,0 +1,199 @@
+/* Caixa do fogão com contorno */
+.stove-box {
+    position: relative;
+    width: 600px; /* Ajuste o tamanho conforme necessário */
+    height: 450px; /* Ajuste o tamanho conforme necessário */
+    margin: 50px auto;
+    border: 5px solid #333; /* Contorno da caixa */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 30px;
+    background-color: #f8f8f8; /* Cor de fundo */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra suave ao redor da caixa */
+}
+
+/* Layout do fogão */
+.stove-layout {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+    position: relative;
+}
+
+.burner {
+    width: 120px;
+    height: 120px;
+    background-color: #d1d1d1;
+    border: 5px solid #333;
+    border-radius: 50%;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.burner.selected {
+    border-color: blue;
+    transform: scale(1.1);
+}
+
+.burner:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.burner.active {
+    box-shadow: 0 0 20px rgba(255, 69, 0, 0.7), inset 0 0 20px rgba(255, 69, 0, 0.4);
+}
+
+/* Botões de boca */
+.burner-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 40px 0;
+}
+
+.burner-btn {
+    padding: 5px 10px;
+    font-size: 12px; /* Tamanho da fonte reduzido */
+    width: 100px; /* Largura uniforme */
+    height: 50px; /* Altura uniforme */
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #333;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.burner-btn .braille {
+    font-size: 10px; /* Tamanho da fonte reduzido */
+    margin-top: 5px; /* Espaço entre o texto e o Braille */
+}
+
+.burner-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Botões de modos */
+.mode-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.mode-btn {
+    padding: 5px 10px;
+    font-size: 12px; /* Tamanho da fonte reduzido */
+    width: 100px; /* Largura uniforme */
+    height: 50px; /* Altura uniforme */
+    border: 2px solid #333;
+    background-color: #444;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s, transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mode-btn .braille {
+    font-size: 10px; /* Tamanho da fonte reduzido */
+    margin-top: 5px; /* Espaço entre o texto e o Braille */
+}
+
+.mode-btn:hover {
+    background-color: #333;
+    transform: scale(1.1);
+}
+
+.mode-btn:active {
+    transform: scale(0.98);
+}
+
+/* Ajuste de altura */
+.height-adjustment {
+    margin: 1px 10px;
+}
+
+.adjust-btn {
+    padding: 5px 10px;
+    font-size: 12px; /* Tamanho da fonte reduzido */
+    width: 100px; /* Largura uniforme */
+    height: 50px; /* Altura uniforme */
+    background-color: #555;
+    color: #fff;
+    border: 2px solid #333;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s, transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.adjust-btn .braille {
+    font-size: 10px; /* Tamanho da fonte reduzido */
+    margin-top: 5px; /* Espaço entre o texto e o Braille */
+}
+
+.adjust-btn:hover {
+    background-color: #333;
+    transform: scale(1.1);
+}
+
+/* Braille */
+.braille {
+    font-family: 'Braille', sans-serif;
+}
+
+/* Estilo do contêiner de instruções */
+.instructions {
+    font-size: 14px; /* Tamanho da fonte reduzido */
+    line-height: 1.5;
+    color: #444;
+    margin-top: 20px;
+}
+
+/* Estilo das pernas */
+.leg {
+    width: 20px;
+    height: 80px;
+    background-color: #333;
+    position: absolute;
+    bottom: -90px; /* Ajusta a distância entre o fogão e as pernas */
+    border-radius: 5px;
+}
+
+#leg1 {
+    left: 10px; /* Posição da primeira perna */
+}
+
+#leg2 {
+    right: 10px; /* Posição da segunda perna */
+}
+
+#leg3 {
+    left: 10px; /* Posição da terceira perna */
+    bottom: -90px;
+}
+
+#leg4 {
+    right: 10px; /* Posição da quarta perna */
+    bottom: -90px;
+}

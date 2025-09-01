@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fogão Acessível</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Caixa do Fogão -->
+    <div class="stove-box">
+      <!-- Layout do Fogão -->
+      <div class="stove-layout" id="stove-layout">
+        <div class="burner" id="burner1"></div>
+        <div class="burner" id="burner2"></div>
+        <div class="burner" id="burner3"></div>
+        <div class="burner" id="burner4"></div>
+      </div>
+      <!-- Botões de Boca -->
+      <div class="burner-buttons">
+        <button
+          class="burner-btn"
+          aria-label="Ligar Boca 1"
+          data-burner="burner1"
+        >
+          Boca 1
+          <span class="braille">⠃⠕⠉⠁ ⠁</span>
+        </button>
+        <button
+          class="burner-btn"
+          aria-label="Ligar Boca 2"
+          data-burner="burner2"
+        >
+          Boca 2
+          <span class="braille">⠃⠕⠉⠁ ⠃</span>
+        </button>
+        <button
+          class="burner-btn"
+          aria-label="Ligar Boca 3"
+          data-burner="burner3"
+        >
+          Boca 3
+          <span class="braille">⠃⠕⠉⠁ ⠉</span>
+        </button>
+
+        <button
+          class="burner-btn"
+          aria-label="Ligar Boca 4"
+          data-burner="burner4"
+        >
+          Boca 4
+          <span class="braille">⠃⠕⠉⠁ ⠙</span>
+        </button>
+      </div>
+
+      <!-- Botões de Modos -->
+      <div class="mode-buttons">
+        <button
+          id="low-heat"
+          class="mode-btn"
+          aria-label="Modo Fogo Baixo"
+          data-heat="low"
+        >
+          Fogo Baixo <br />
+          <span class="braille">⠋⠕⠛⠕ ⠃⠁⠊⠭⠕</span>
+        </button>
+        <button
+          id="high-heat"
+          class="mode-btn"
+          aria-label="Modo Fogo Alto"
+          data-heat="high"
+        >
+          Fogo Alto <br />
+          <span class="braille">⠋⠕⠛⠕ ⠁⠇⠞⠕</span>
+        </button>
+        <button
+          id="turn-off"
+          class="mode-btn"
+          aria-label="Desligar Boca"
+          data-heat="off"
+        >
+          Desligar <br />
+          <span class="braille">⠙⠑⠎⠇⠊⠛⠁⠗</span>
+        </button>
+      </div>
+
+      <!-- Instruções de uso -->
+      <div class="instructions">
+        <p>
+          Para usar o fogão, selecione a boca e o modo. Em seguida, um som de
+          feedback será emitido para confirmar suas ações.
+        </p>
+        <span class="braille"
+          >⠏⠁⠗⠁ ⠥⠎⠁⠗ ⠕ ⠋⠕⠛⠁⠕⠂ ⠎⠑⠇⠑⠉⠊⠕⠝⠑ ⠁ ⠃⠕⠉⠁ ⠑ ⠕ ⠍⠕⠙⠕⠲ ⠁ ⠟⠥⠁⠇⠟⠥⠑⠗ ⠍⠕⠍⠑⠝⠞⠕⠂ ⠥⠍
+          ⠎⠕⠍ ⠙⠑ ⠋⠑⠑⠙⠃⠁⠉⠅ ⠃⠑⠗⠁́ ⠑⠍⠊⠞⠊⠙⠕ ⠏⠁⠗⠁ ⠉⠕⠝⠋⠊⠗⠍⠁⠗ ⠎⠥⠁⠎ ⠁⠉⠟⠑⠎⠲</span
+        >
+      </div>
+
+      <!-- Pernas do fogão -->
+      <div id="leg1" class="leg"></div>
+      <div id="leg2" class="leg"></div>
+      <div id="leg3" class="leg"></div>
+      <div id="leg4" class="leg"></div>
+      <!-- Botão de Ajuste de Altura -->
+      <div class="height-adjustment">
+        <button
+          id="adjust-height-btn"
+          class="adjust-btn"
+          aria-label="Ajustar Altura"
+        >
+          Ajustar Altura
+          <span class="braille">⠁⠚⠥⠎⠞⠁⠗ ⠁⠇⠞⠥⠗⠁</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Efeitos Sonoros -->
+    <audio id="burner1-sound" src="sounds/Boca 1.wav"></audio>
+    <audio id="burner2-sound" src="sounds/Boca 2.wav"></audio>
+    <audio id="burner3-sound" src="sounds/Boca 3.wav"></audio>
+    <audio id="burner4-sound" src="sounds/Boca 4.wav"></audio>
+    <audio id="low-heat-sound" src="sounds/Fogo Baixo.wav"></audio>
+    <audio id="high-heat-sound" src="sounds/Fogo Alto.wav"></audio>
+    <audio id="turn-off-sound" src="sounds/Desligado.wav"></audio>
+    <audio id="select-sound" src="sounds/Selecionar.wav"></audio>
+    <audio id="adjust-height-sound" src="sounds/Altura Ajustada.wav"></audio>
+
+    <script src="index.js"></script>
+  </body>
+</html>
